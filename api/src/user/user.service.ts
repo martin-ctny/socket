@@ -14,7 +14,7 @@ export class UserService {
   ) {}
 
   async findOneByUsername(username: string): Promise<UserEntity> {
-    return this.userRepository.findOne({ where: { username }});
+    return this.userRepository.findOne({ where: { username } });
   }
 
   async create(createUserDto: CreateUserDto): Promise<UserEntity> {
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   async findOne(id: number): Promise<UserEntity> {
-    return this.userRepository.findOne({ where: { id }});
+    return this.userRepository.findOne({ where: { id } });
   }
 
   async validateUser(payload) {

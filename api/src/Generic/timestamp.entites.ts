@@ -1,8 +1,8 @@
 import { CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
 
 export class TimestampEntites {
-  @CreateDateColumn({ 
-    type: "timestamp with time zone",
+  @CreateDateColumn({
+    type: 'timestamp with time zone',
     update: false,
     // default: new Date()
     default: () => 'NOW()',
@@ -11,12 +11,12 @@ export class TimestampEntites {
   createdAt: Date;
 
   @UpdateDateColumn({
-    type: "timestamp with time zone",
+    type: 'timestamp with time zone',
   })
   updatedAt: Date;
 
   @DeleteDateColumn({
-    type: "timestamp with time zone",
+    type: 'timestamp with time zone',
   })
   deletedAt: Date;
 }
